@@ -3,121 +3,245 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Habon Nur builds human-centered marketing systems, lifecycle programs, and practical AI operations.">
-  <meta name="theme-color" content="#f2ebdc">
-  <meta property="og:title" content="Habon Nur — Marketing Operations &amp; AI">
-  <meta property="og:description" content="The human is the headline. Marketing systems, campaigns, and practical AI.">
-  <meta property="og:image" content="og-image.png">
-  <title>Habon Nur — Marketing Operations &amp; AI</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Habon Nur builds lifecycle marketing systems, campaign operations, and practical AI infrastructure.">
+  <meta name="theme-color" content="#eee7d7">
+  <title>Habon Nur — Marketing Operations + AI</title>
+  <link rel="stylesheet" href="scroll-prototype.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="masthead shell">
-    <a class="wordmark" href="#top">HABON NUR</a>
-    <nav aria-label="Primary navigation">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+  <header class="floating-nav">
+    <a href="#top">HABON NUR</a>
+    <button class="index-toggle" type="button" aria-expanded="false" aria-controls="site-index">INDEX +</button>
+    <nav class="site-index" id="site-index" aria-label="Site index">
+      <a href="#work"><span>01</span><span>THE WORK</span></a>
+      <a href="#thinking"><span>02</span><span>THE THINKING</span></a>
+      <a href="#machinery"><span>03</span><span>THE MACHINERY</span></a>
+      <a href="#person"><span>04</span><span>THE PERSON</span></a>
+      <a href="#contact"><span>05</span><span>MAKE CONTACT</span></a>
     </nav>
   </header>
 
-  <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-opening hero-closing">
-      <div class="hero-inner">
-        <h1 class="hero-opening" id="hero-opening">THE HUMAN IS THE</h1>
-        <img
-          class="hero-portrait"
-          src="assets/human-headline.jpg"
-          width="734"
-          height="931"
-          alt="Expressive black-and-white close portrait"
-        >
-        <p class="hero-closing" id="hero-closing">HEADLINE.</p>
+  <main>
+    <section class="hero-stage" id="top">
+      <div class="hero-sticky">
+        <div class="hero-lockup" data-reveal>
+          <p><span>THE</span><span>HUMAN</span><span>IS</span><span>THE</span></p>
+          <img src="assets/human-headline.jpg" width="734" height="931" alt="Expressive black-and-white close portrait">
+          <h1>HEADLINE.</h1>
+        </div>
       </div>
     </section>
 
-    <section class="introduction shell" aria-label="Introduction">
-      <p class="introduction-label">HABON NUR · MARKETING OPERATIONS + AI</p>
-      <p class="introduction-copy editorial">I build the systems behind ambitious marketing—lifecycle programs, campaign operations, and practical AI that makes the work better without taking the human out of it.</p>
-    </section>
-
-    <section class="work shell" id="work" aria-labelledby="work-title">
-      <h2 class="section-title" id="work-title">SELECTED WORK.</h2>
-
-      <article class="project-row">
-        <p class="project-number">01.</p>
-        <div class="project-copy">
-          <h3>THE SIGNAL ROOM.</h3>
-          <p class="editorial">An AI monitoring agent that found campaign problems earlier.</p>
-          <p class="result">75% faster detection · $2M protected</p>
-        </div>
-      </article>
-
-      <article class="project-row">
-        <p class="project-number">02.</p>
-        <div class="project-copy">
-          <h3>CAMPAIGN OPERATIONS.</h3>
-          <p class="editorial">A working system for shipping complex lifecycle programs.</p>
-          <p class="result">30+ campaigns each week · 4 million sellers</p>
-        </div>
-      </article>
-
-      <article class="project-row">
-        <p class="project-number">03.</p>
-        <div class="project-copy">
-          <h3>THE ITERABLE MCP.</h3>
-          <p class="editorial">Giving AI useful, governed access to the marketing stack.</p>
-          <p class="result">Custom MCP server · RAG · 13 endpoints</p>
-        </div>
-      </article>
-
-      <article class="project-row">
-        <p class="project-number">04.</p>
-        <div class="project-copy">
-          <h3>PERSONALIZATION AT SCALE.</h3>
-          <p class="editorial">More relevant marketing without multiplying production work.</p>
-          <p class="result">$200K+ average revenue per campaign · 15% higher push conversion</p>
-        </div>
-      </article>
-    </section>
-
-    <section class="manifesto" aria-labelledby="manifesto-title">
-      <div class="manifesto-inner">
-        <h2 id="manifesto-title">OLD-SCHOOL MARKETING.<br>NEW-SCHOOL MACHINERY.</h2>
-        <p class="editorial">I understand lifecycle, segmentation, campaign operations, and the judgment good marketing requires. I also build the systems that make that work faster, safer, and easier to scale.</p>
-        <p class="result">The ideas stay human. The machinery gets better.</p>
+    <section class="intro-frame frame" id="thinking">
+      <div class="frame-inner intro-inner" data-reveal>
+        <p class="frame-label">MARKETING OPERATIONS + AI</p>
+        <p class="intro-statement editorial">I build the systems behind ambitious marketing.</p>
+        <p class="intro-detail editorial">Lifecycle programs, campaign operations, and practical AI that makes the work better without taking the human out of it.</p>
       </div>
     </section>
 
-    <section class="about shell" id="about" aria-labelledby="about-title">
-      <div class="about-inner">
-        <h2 id="about-title">I'VE ALWAYS TAUGHT THE ROOM.</h2>
-        <p class="editorial">I started by teaching marketing at a co-op, then built lifecycle and campaign operations at scale. At Square, I founded AI Talks—weekly sessions that helped marketers turn unfamiliar technology into useful production tools.</p>
-        <p class="result">Seven years in marketing · AI systems built in production · teams enabled</p>
+    <section class="work-index frame" id="work">
+      <div class="case-archive">
+        <header class="case-archive-header">
+          <div><p>CAMPAIGN ARCHIVE</p><p>SIX SELECTED FILES</p></div>
+          <div class="archive-controls" aria-label="Case file controls">
+            <button class="archive-prev" type="button" aria-label="Previous case">←</button>
+            <p><span class="archive-current">INDEX</span> / 06</p>
+            <button class="archive-next" type="button" aria-label="Next case">→</button>
+          </div>
+        </header>
+
+        <div class="case-card-rail" tabindex="0" aria-label="Horizontally scrolling case files">
+          <article class="archive-card archive-cover" data-case="INDEX">
+            <header><p>THE PORTFOLIO · VOLUME ONE</p><p>2021–PRESENT</p></header>
+            <div class="cover-title">
+              <h2 class="editorial">Selected<br>Work</h2>
+              <p class="editorial">Six systems built to make ambitious marketing faster, safer, and more accountable.</p>
+            </div>
+            <nav class="cover-directory" aria-label="Selected work directory">
+              <a href="#case-01"><span>Signal Room</span><span>01</span></a>
+              <a href="#case-02"><span>Campaign Operations</span><span>02</span></a>
+              <a href="#case-03"><span>Iterable MCP</span><span>03</span></a>
+              <a href="#case-04"><span>Personalization at Scale</span><span>04</span></a>
+              <a href="#case-05"><span>Hermes</span><span>05</span></a>
+              <a href="#case-06"><span>Open Engine</span><span>06</span></a>
+            </nav>
+            <p class="cover-note">PULL THE NEXT FILE →</p>
+          </article>
+
+          <article class="archive-card" id="case-01" data-case="01">
+            <header><p>CASE FILE 01</p><p>SQUARE · 2024–2026</p></header>
+            <h3 class="editorial">Signal Room</h3>
+            <div class="case-artifact artifact-signal" aria-label="Monitoring system illustration">
+              <div class="monitor-top"><span>PIPELINE HEALTH</span><span>LIVE</span></div>
+              <div class="signal-line"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="alert-slip"><strong>ANOMALY FOUND</strong><span>Incident routed with ground-truth receipt.</span></div>
+            </div>
+            <p class="card-summary editorial">An AI monitoring agent that found campaign pipeline problems earlier.</p>
+            <dl class="case-specs"><div><dt>RECEIPT</dt><dd>75% faster detection · $2M+ protected</dd></div><div><dt>METHOD</dt><dd>Ground truth · regression drift</dd></div></dl>
+          </article>
+
+          <article class="archive-card" id="case-02" data-case="02">
+            <header><p>CASE FILE 02</p><p>SQUARE · 2024–2026</p></header>
+            <h3 class="editorial">Campaign Operations</h3>
+            <div class="case-artifact artifact-calendar" aria-label="Campaign operations calendar illustration">
+              <div class="calendar-head"><span>INTAKE</span><span>BUILD</span><span>QA</span><span>SHIP</span></div>
+              <div class="calendar-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <p>JIRA → NOTION → LAUNCH</p>
+            </div>
+            <p class="card-summary editorial">A working system for shipping complex lifecycle programs.</p>
+            <dl class="case-specs"><div><dt>SCALE</dt><dd>30+ campaigns weekly · 4M+ sellers</dd></div><div><dt>RECEIPT</dt><dd>95% less manual calendar work</dd></div></dl>
+          </article>
+
+          <article class="archive-card" id="case-03" data-case="03">
+            <header><p>CASE FILE 03</p><p>SQUARE · 2024–2026</p></header>
+            <h3 class="editorial">Iterable MCP</h3>
+            <div class="case-artifact artifact-mcp" aria-label="MCP endpoint map illustration">
+              <svg class="mcp-connectors" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <line x1="50" y1="50" x2="17" y2="13"></line>
+                <line x1="50" y1="50" x2="83" y2="13"></line>
+                <line x1="50" y1="50" x2="17" y2="50"></line>
+                <line x1="50" y1="50" x2="83" y2="50"></line>
+                <line x1="50" y1="50" x2="17" y2="87"></line>
+                <line x1="50" y1="50" x2="83" y2="87"></line>
+              </svg>
+              <div class="mcp-core">MCP</div>
+              <ul><li>CAMPAIGNS</li><li>METRICS</li><li>JOURNEYS</li><li>CONTENT</li><li>AUDIT</li><li>13 ENDPOINTS</li></ul>
+            </div>
+            <p class="card-summary editorial">Gave AI hands on the marketing stack—six months before the vendor did.</p>
+            <dl class="case-specs"><div><dt>SYSTEM</dt><dd>Custom MCP server · RAG · Goose</dd></div><div><dt>PROOF</dt><dd>The GTM engineering receipt</dd></div></dl>
+          </article>
+
+          <article class="archive-card" id="case-04" data-case="04">
+            <header><p>CASE FILE 04</p><p>SEATGEEK · 2022–2024</p></header>
+            <h3 class="editorial">Personalization at Scale</h3>
+            <div class="case-artifact artifact-personal" aria-label="Live data flowing through one template to produce personalized messages">
+              <div><span>01 · INPUT</span><strong>LIVE CUSTOMER DATA</strong><small>Language · team · ticket inventory</small></div>
+              <div><span>02 · SYSTEM</span><strong>ONE REUSABLE TEMPLATE</strong><small>Automatically builds the right message</small></div>
+              <div><span>03 · RESULT</span><strong>+15%</strong><small>Push conversion from personalized sends</small></div>
+            </div>
+            <p class="card-summary editorial">More relevant marketing without multiplying production work.</p>
+            <dl class="case-specs"><div><dt>RECEIPT</dt><dd>$200K+ average revenue per campaign</dd></div><div><dt>SCALE</dt><dd>100K+ recipients · 3 soccer verticals</dd></div></dl>
+          </article>
+
+          <article class="archive-card" id="case-05" data-case="05">
+            <header><p>CASE FILE 05</p><p>PERSONAL INFRASTRUCTURE</p></header>
+            <h3 class="editorial">Hermes</h3>
+            <div class="case-artifact artifact-hermes" aria-label="Verified morning brief illustration">
+              <p>MORNING BRIEF · 07:00</p><ol><li>Read the full thread <b>✓</b></li><li>Ground every claim <b>✓</b></li><li>Attach message ID <b>✓</b></li></ol>
+            </div>
+            <p class="card-summary editorial">A 24/7 agent that reads my inbox, briefs me every morning, and never invents a thing.</p>
+            <dl class="case-specs"><div><dt>RHYTHM</dt><dd>6 scheduled runs every day</dd></div><div><dt>RECEIPT</dt><dd>Message ID on every claim · &lt;$1/day</dd></div></dl>
+          </article>
+
+          <article class="archive-card" id="case-06" data-case="06">
+            <header><p>CASE FILE 06</p><p>PERSONAL INFRASTRUCTURE</p></header>
+            <h3 class="editorial">Open Engine</h3>
+            <div class="case-artifact artifact-engine" aria-label="Governed agent task ledger illustration">
+              <div><span>CLAIM</span><span>ACT</span><span>VERIFY</span></div><p>Task 042 · scoped</p><p>Skill v3.2 · eval passed</p><p>Receipt 8F17 · attached</p>
+            </div>
+            <p class="card-summary editorial">Governed AI: agents claim scoped tasks and leave a paper trail.</p>
+            <dl class="case-specs"><div><dt>SYSTEM</dt><dd>Linear queue · versioned skills</dd></div><div><dt>METHOD</dt><dd>Eval gates · receipts for every action</dd></div></dl>
+          </article>
+        </div>
+        <p class="archive-drag-note">DRAG, SWIPE, OR USE THE ARROWS</p>
       </div>
     </section>
 
-    <section class="contact shell" id="contact" aria-labelledby="contact-title">
-      <div class="contact-inner">
-        <h2 id="contact-title">AVAILABLE.</h2>
-        <p class="editorial">For a builder's seat inside a marketing, growth, or GTM team. New York or remote.</p>
-        <!-- Replace the four placeholder URLs below before publishing. -->
-        <div class="contact-links" aria-label="Contact links">
-          <a href="mailto:REPLACE-WITH-YOUR-EMAIL">Email</a>
-          <a href="https://www.linkedin.com/in/REPLACE-ME">LinkedIn</a>
-          <a href="https://github.com/REPLACE-ME">GitHub</a>
-          <a href="REPLACE-WITH-RESUME.pdf">Résumé</a>
+    <section class="pitch-frame frame" id="machinery">
+      <div class="pitch-inner" data-reveal>
+        <p class="pitch-kicker">A PROPOSITION FOR MODERN MARKETING DEPARTMENTS</p>
+        <h2 class="editorial">Old-school marketing.<br>New-school machinery.</h2>
+        <div class="pitch-copy editorial">
+          <p>Most teams choose between two hires: the strategist who understands lifecycle, segments, and send-time, and the engineer who can wire the tools together.</p>
+          <p>I've been the first for seven years, at Square and SeatGeek. Then I started building the second one's systems myself: a monitoring agent that protected $2M in revenue, an MCP server the vendor hadn't shipped yet, and a fleet of personal agents that run around the clock.</p>
+          <p>You're not hiring someone who “uses AI.” You're hiring someone who ships it—and audits it.</p>
         </div>
-        <p class="contact-note editorial">Replies within one business day—the human, not an agent.</p>
+        <p class="pitch-smallprint">EVERY CLAIM ON THIS SITE CARRIES A RECEIPT — A METRIC, A LOG, OR A DIAGRAM.</p>
+      </div>
+    </section>
+
+    <section class="resume-frame frame" id="person">
+      <div class="resume-stage">
+        <article class="morgan-resume" aria-label="Habon Nur résumé">
+          <header class="resume-masthead">
+            <h2>Habon Nur</h2>
+            <div><strong>MARKETING OPERATIONS + AI</strong><span>2026</span></div>
+          </header>
+
+          <section class="resume-intro-grid">
+            <p class="resume-bio">Marketing operations leader and AI systems builder with seven years designing lifecycle programs, campaign infrastructure, and governed automation. Human judgment in the foreground; reliable machinery behind it.</p>
+            <figure class="resume-portrait"><img src="assets/habon-headshot.jpg" alt="Black-and-white portrait of Habon Nur"></figure>
+            <address class="resume-contact">
+              <p><strong>EMAIL</strong><a href="mailto:habonnur7@gmail.com">habonnur7@gmail.com</a></p>
+              <p><strong>LINKEDIN</strong><a href="https://www.linkedin.com/in/habonnur" target="_blank" rel="noopener noreferrer">/in/habonnur</a></p>
+              <p><strong>GITHUB</strong><a href="https://github.com/habonnur" target="_blank" rel="noopener noreferrer">github.com/habonnur</a></p>
+            </address>
+          </section>
+
+          <section class="resume-work">
+            <h3>Work Experience</h3>
+            <div class="resume-work-grid">
+              <article>
+                <h4>SQUARE <span>2024–2026</span></h4>
+                <p class="role">Lifecycle Operations Manager · L5 Senior IC</p>
+                <ul>
+                  <li>Audited 12,000+ user fields and 2,000+ events, establishing Square Marketing's first formal data-modeling framework across five teams.</li>
+                  <li>Built AI intake and JIRA-to-Notion automation that cut intake 80% and manual calendar work 95% across six teams.</li>
+                  <li>Improved incident detection 75% with lifecycle observability that protected $2M+ in revenue.</li>
+                  <li>Engineered a governed Iterable MCP with RAG and 13 endpoints, six months before official platform support.</li>
+                </ul>
+              </article>
+              <article>
+                <h4>SEATGEEK <span>2022–2024</span></h4>
+                <p class="role">CRM Operations · Promoted</p>
+                <ul>
+                  <li>Built dynamic Handlebars journeys that drove 16% revenue growth across three verticals.</li>
+                  <li>Created an A/B testing framework that improved click-through rate 15% and became team-wide practice.</li>
+                  <li>Connected AWS inventory and real-time AppsFlyer data to Iterable for 100K+ recipients.</li>
+                </ul>
+              </article>
+              <article>
+                <h4>SIMPLEPRACTICE <span>2021–2022</span></h4>
+                <p class="role">Partnership Marketing</p>
+                <ul>
+                  <li>Built an automated partner onboarding journey from architecture through launch.</li>
+                  <li>Used audience logic, custom HTML, and triggered sequences to lift engagement 25%.</li>
+                  <li>Managed 90+ B2B campaigns per quarter across four cross-functional teams.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="resume-capabilities">
+            <article><h3>AI &amp; Agents</h3><p>OpenAI + Anthropic APIs · MCP · RAG · Goose · Claude Code · n8n · Clay</p></article>
+            <article><h3>Platforms</h3><p>Iterable · Braze · Simon Data · HubSpot · Klaviyo</p></article>
+            <article><h3>Data + Code</h3><p>Snowflake · SQL · Looker · Tableau · Amplitude · Python · JavaScript · HTML/CSS · Handlebars</p></article>
+          </section>
+
+          <footer class="resume-credentials">
+            <section><h3>Education</h3><p><strong>B.A.</strong> · Sonoma State University</p></section>
+            <section><h3>Certifications</h3><p>Braze Certified Marketer · 2026<br>Iterable Foundations Certification · 2024</p></section>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-frame frame" id="contact">
+      <div class="frame-inner contact-inner" data-reveal>
+        <p class="frame-label">NEW BUSINESS</p>
+        <h2>MAKE<br>CONTACT.</h2>
+        <p class="editorial">For a builder's seat inside a marketing, growth, or GTM team.</p>
+        <nav class="contact-links" aria-label="Contact links">
+          <a href="mailto:habonnur7@gmail.com">EMAIL ↗</a>
+          <a href="https://www.linkedin.com/in/habonnur" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
+          <a href="https://github.com/habonnur" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+          <a href="#person">RÉSUMÉ ↑</a>
+        </nav>
       </div>
     </section>
   </main>
 
-  <footer class="footer shell">
-    <p>HABON NUR · MMXXVI</p>
-    <p>NYC / REMOTE</p>
-  </footer>
+  <script src="scroll-prototype.js"></script>
 </body>
 </html>

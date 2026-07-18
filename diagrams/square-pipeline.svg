@@ -1,0 +1,61 @@
+<svg viewBox="0 0 900 470" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#171613"/>
+    </marker>
+  </defs>
+  <style>
+    .hn { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; fill: #171613; }
+    .bk { font-family: Baskerville, Georgia, serif; font-style: italic; fill: #171613; }
+    .box { fill: none; stroke: #171613; stroke-width: 2; }
+    .ink { fill: #171613; }
+    .line { stroke: #171613; stroke-width: 2; }
+    .pp { fill: #F2EBDC !important; }
+  </style>
+
+  <rect width="900" height="470" fill="#F2EBDC"/>
+
+  <text x="62" y="52" class="hn" font-size="24" letter-spacing="-0.5">FIG. 2 — THE TICKET DESK. SIGNALS IN, TICKETS OUT.</text>
+  <text x="62" y="76" class="bk" font-size="15">The machine drafts. The marketer approves.</text>
+
+  <!-- Slack -->
+  <rect x="62" y="118" width="180" height="64" class="box"/>
+  <text x="152" y="146" class="hn" font-size="14" text-anchor="middle">SLACK</text>
+  <text x="152" y="166" class="bk" font-size="13" text-anchor="middle">campaign threads</text>
+
+  <!-- Notion -->
+  <rect x="62" y="226" width="180" height="64" class="box"/>
+  <text x="152" y="254" class="hn" font-size="14" text-anchor="middle">NOTION</text>
+  <text x="152" y="274" class="bk" font-size="13" text-anchor="middle">briefs and roadmaps</text>
+
+  <!-- Pipeline — emphasis box -->
+  <rect x="320" y="110" width="270" height="186" class="ink"/>
+  <text x="455" y="142" class="hn pp" font-size="16" text-anchor="middle">THE PIPELINE.</text>
+  <text x="455" y="164" class="bk pp" font-size="13" text-anchor="middle">Goose (Block open source) + LLM</text>
+  <line x1="344" y1="180" x2="566" y2="180" stroke="#F2EBDC" stroke-width="1"/>
+  <text x="455" y="206" class="hn pp" font-size="13" text-anchor="middle">EXTRACTS THE ESSENTIALS:</text>
+  <text x="455" y="230" class="bk pp" font-size="13" text-anchor="middle">audience · channel · timing</text>
+  <text x="455" y="250" class="bk pp" font-size="13" text-anchor="middle">offer · dependencies</text>
+  <text x="455" y="278" class="bk pp" font-size="13" text-anchor="middle">→ complete ticket drafts</text>
+
+  <!-- JIRA -->
+  <rect x="668" y="118" width="170" height="72" class="box"/>
+  <text x="753" y="148" class="hn" font-size="14" text-anchor="middle">JIRA</text>
+  <text x="753" y="168" class="bk" font-size="13" text-anchor="middle">draft campaign tickets</text>
+
+  <!-- Review -->
+  <rect x="668" y="244" width="170" height="64" class="box"/>
+  <text x="753" y="272" class="hn" font-size="14" text-anchor="middle">THE MARKETER</text>
+  <text x="753" y="292" class="bk" font-size="13" text-anchor="middle">approve · edit · ship</text>
+
+  <!-- Arrows -->
+  <line x1="242" y1="150" x2="314" y2="176" class="line" marker-end="url(#arr2)"/>
+  <line x1="242" y1="258" x2="314" y2="232" class="line" marker-end="url(#arr2)"/>
+  <line x1="590" y1="168" x2="662" y2="156" class="line" marker-end="url(#arr2)"/>
+  <line x1="753" y1="190" x2="753" y2="238" class="line" marker-end="url(#arr2)"/>
+  <text x="765" y="220" class="bk" font-size="13">human-in-the-loop</text>
+
+  <!-- Result line -->
+  <line x1="62" y1="406" x2="838" y2="406" class="line"/>
+  <text x="62" y="438" class="hn" font-size="15">80% less manual campaign setup · tickets created only when campaigns are ready</text>
+</svg>

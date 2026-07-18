@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Habon Nur — homepage mock (60s agency card system)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #F2EBDC;
+    color: #171613;
+    width: 1200px;
+    margin: 0 auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .hn { font-weight: 700; }
+  .bk { font-family: Baskerville, Georgia, serif; font-weight: 400; line-height: 1.3; }
+  .rule { border-top: 2px solid #171613; }
+  .m { margin-left: 62px; margin-right: 62px; }
+
+  /* Masthead */
+  .mast { display: flex; justify-content: space-between; align-items: baseline;
+          padding: 28px 62px 22px; }
+  .mast .links span { margin-left: 36px; }
+  .mast, .mast .links { font-weight: 700; font-size: 21px; letter-spacing: -0.3px; }
+
+  /* Hero — per DESIGN-SPECS: axis x=220, photo 760w, full image */
+  .hero { padding: 64px 220px 0; }
+  .hero .top { font-weight: 700; font-size: 52px; letter-spacing: -2.3px; }
+  .hero img { display: block; width: 760px; margin-top: 34px; }
+  .hero .bottom { font-weight: 700; font-size: 91px; letter-spacing: -4px; margin-top: 26px; }
+
+  /* Proof stat */
+  .proof { margin: 120px 62px 0; padding: 56px 0 64px 158px; }
+  .proof .stat { font-weight: 700; font-size: 180px; letter-spacing: -6px; line-height: 1; }
+  .proof .exp { font-size: 28px; margin-top: 18px; max-width: 760px; }
+  .result { font-weight: 700; font-size: 21px; }
+  .proof .result { margin-top: 26px; }
+
+  /* Selected work */
+  .work { margin: 40px 62px 0; }
+  .work h2 { font-weight: 700; font-size: 92px; letter-spacing: -4px; padding: 40px 0 48px; }
+  .kicker { font-weight: 700; font-size: 21px; letter-spacing: 0.2px; padding: 26px 0 0 102px; }
+  .entry { display: flex; padding: 44px 0 48px; }
+  .entry .num { font-weight: 700; font-size: 23px; width: 102px; flex-shrink: 0; padding-top: 14px; }
+  .entry .txt { }
+  .entry .title { font-weight: 700; font-size: 70px; letter-spacing: -3px; line-height: 0.95; }
+  .entry .desc { font-size: 28px; margin-top: 18px; }
+  .entry .result { margin-top: 16px; }
+
+  /* Ink pitch */
+  .pitch { background: #171613; color: #F2EBDC; margin-top: 96px; padding: 110px 220px; }
+  .pitch h2 { font-weight: 700; font-size: 56px; letter-spacing: -2.4px; line-height: 1.0; max-width: 760px; }
+  .pitch .bk { font-size: 24px; margin-top: 34px; max-width: 720px; }
+  .pitch .result { margin-top: 40px; }
+
+  /* Teacher */
+  .teach { padding: 120px 220px 0; }
+  .teach h2 { font-weight: 700; font-size: 48px; letter-spacing: -2px; }
+  .teach .bk { font-size: 24px; margin-top: 24px; max-width: 680px; }
+
+  /* Resume */
+  .cv { margin: 120px 62px 0; }
+  .cv h2 { font-weight: 700; font-size: 48px; letter-spacing: -2px; padding-bottom: 36px; }
+  .row { display: flex; padding: 30px 0 34px; }
+  .row .who { font-weight: 700; font-size: 23px; width: 340px; flex-shrink: 0; }
+  .row .what .bk { font-size: 22px; }
+  .row .what .result { margin-top: 10px; font-size: 18px; }
+  .certs { padding: 26px 0 0 340px; }
+
+  /* Available */
+  .avail { margin: 130px 62px 0; padding: 64px 0 0 158px; }
+  .avail h2 { font-weight: 700; font-size: 140px; letter-spacing: -6px; line-height: 1; }
+  .avail .bk { font-size: 26px; margin-top: 26px; max-width: 720px; }
+  .avail .result { margin-top: 34px; font-size: 23px; }
+  .avail .quiet { font-size: 18px; font-style: italic; margin-top: 18px; }
+
+  /* Footer */
+  .foot { display: flex; justify-content: space-between; margin: 110px 62px 0;
+          padding: 24px 0 44px; font-weight: 700; font-size: 14px; letter-spacing: 0.4px; }
+</style>
+</head>
+<body>
+
+  <div class="mast">
+    <div>HABON NUR</div>
+    <div class="links"><span>WORK</span><span>ABOUT</span><span>CONTACT</span></div>
+  </div>
+  <div class="rule m"></div>
+
+  <div class="hero">
+    <div class="top">THE HUMAN IS THE</div>
+    <img src="hero-placeholder.png">
+    <div class="bottom">HEADLINE.</div>
+  </div>
+
+  <div class="proof rule">
+    <div class="stat">$2M+</div>
+    <div class="exp bk">in revenue protected by an AI monitoring agent built at Square.</div>
+    <div class="result">500+ campaigns · 10+ locales · 4M+ sellers · agents running 24/7</div>
+  </div>
+
+  <div class="work">
+    <div class="rule"></div>
+    <h2>SELECTED WORK.</h2>
+
+    <div class="kicker">CLIENT: SQUARE — 2024–2026</div>
+    <div class="rule" style="margin-top:26px"></div>
+    <div class="entry">
+      <div class="num">01.</div>
+      <div class="txt">
+        <div class="title">THE SIGNAL ROOM.</div>
+        <div class="desc bk">An AI monitoring agent that found campaign problems earlier.</div>
+        <div class="result">75% faster detection · $2M protected</div>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <div class="entry">
+      <div class="num">02.</div>
+      <div class="txt">
+        <div class="title">CAMPAIGN OPERATIONS.</div>
+        <div class="desc bk">A working system for shipping complex lifecycle programs.</div>
+        <div class="result">30+ campaigns each week · 4 million sellers</div>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <div class="entry">
+      <div class="num">03.</div>
+      <div class="txt">
+        <div class="title">THE ITERABLE MCP.</div>
+        <div class="desc bk">Gave AI hands on the marketing stack, six months before the vendor did.</div>
+        <div class="result">Custom MCP server · RAG · 13 endpoints</div>
+      </div>
+    </div>
+
+    <div class="kicker">CLIENT: SEATGEEK — 2022–2024</div>
+    <div class="rule" style="margin-top:26px"></div>
+    <div class="entry">
+      <div class="num">04.</div>
+      <div class="txt">
+        <div class="title">PERSONALIZATION AT SCALE.</div>
+        <div class="desc bk">More relevant marketing without multiplying production work.</div>
+        <div class="result">$200K+ avg revenue per campaign · +15% push conversion</div>
+      </div>
+    </div>
+
+    <div class="kicker">PERSONAL INFRASTRUCTURE — 2025–PRESENT</div>
+    <div class="rule" style="margin-top:26px"></div>
+    <div class="entry">
+      <div class="num">05.</div>
+      <div class="txt">
+        <div class="title">HERMES.</div>
+        <div class="desc bk">A 24/7 agent that reads my inbox, briefs me every morning, and never invents a thing.</div>
+        <div class="result">6 runs a day · under $1 a day · zero fabrications</div>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <div class="entry">
+      <div class="num">06.</div>
+      <div class="txt">
+        <div class="title">THE OPEN ENGINE.</div>
+        <div class="desc bk">Governed AI: agents claim scoped tasks and leave a paper trail.</div>
+        <div class="result">Linear queue · versioned skills · receipts for every action</div>
+      </div>
+    </div>
+    <div class="rule"></div>
+  </div>
+
+  <div class="pitch">
+    <h2>OLD-SCHOOL MARKETING. NEW-SCHOOL MACHINERY.</h2>
+    <div class="bk">Most teams choose between two hires: the strategist who understands
+    lifecycle, segments, and send-time — and the engineer who can wire the tools
+    together. I've been the first for seven years, at Square and SeatGeek. Then I
+    started building the second one's systems myself: a monitoring agent that
+    protected two million dollars in revenue, an MCP server the vendor hadn't
+    shipped yet, a fleet of personal agents that run around the clock. You're not
+    hiring someone who "uses AI." You're hiring someone who ships it — and audits it.</div>
+    <div class="result">Every claim on this site carries a receipt — a metric, a log, or a diagram.</div>
+  </div>
+
+  <div class="teach">
+    <h2>I'VE ALWAYS TAUGHT THE ROOM.</h2>
+    <div class="bk">Taught marketing at a co-op before I ever ran it at scale. At Square,
+    founded AI Talks — weekly sessions coaching 15+ marketers, producing nine
+    production tools adopted across two teams. Hire the builder, get the
+    enablement program free.</div>
+  </div>
+
+  <div class="cv">
+    <h2>THE RÉSUMÉ, IN ONE SCROLL.</h2>
+    <div class="rule"></div>
+    <div class="row">
+      <div class="who">SQUARE — 2024–2026</div>
+      <div class="what">
+        <div class="bk">Lifecycle Operations Manager. Promoted to L5 Senior IC.</div>
+        <div class="result">$2M protected · 500+ campaigns · 4M+ sellers</div>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <div class="row">
+      <div class="who">SEATGEEK — 2022–2024</div>
+      <div class="what">
+        <div class="bk">CRM Operations Coordinator, promoted to CRM Associate.</div>
+        <div class="result">$200K+ avg revenue per campaign · +15% push conversion</div>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <div class="row">
+      <div class="who">SIMPLEPRACTICE — 2021–2022</div>
+      <div class="what">
+        <div class="bk">Partnership Marketing Coordinator.</div>
+        <div class="result">Open rates 4.63% → 19.04% · 90+ campaigns per quarter</div>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <div class="row">
+      <div class="who">ASCENCIA — 2019–2021</div>
+      <div class="what">
+        <div class="bk">Donor &amp; Volunteer Coordinator. The first funnel I ever ran.</div>
+        <div class="result">$77K raised · +21% donor acquisition</div>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <div class="certs result">Braze Certified (2026) · Iterable Certified (2024)</div>
+  </div>
+
+  <div class="avail rule">
+    <h2>AVAILABLE.</h2>
+    <div class="bk">A builder's seat inside a marketing, growth, or GTM team —
+    GTM engineer, marketing operations AI, agentic operator. New York or remote.</div>
+    <div class="result">Email · LinkedIn · GitHub · Résumé (PDF)</div>
+    <div class="quiet bk">Replies within one business day — the human, not an agent.</div>
+  </div>
+
+  <div class="foot rule">
+    <div>HABON NUR · MMXXVI</div>
+    <div>NYC / REMOTE</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<title>Habon Nur — Portfolio Visual Direction</title>
+<style>
+  :root {
+    --night: #12131C;
+    --raised: #1A1C28;
+    --paper: #F2EBDD;
+    --ink: #1C1A16;
+    --cream: #EDE6D6;
+    --muted: #8A8FA3;
+    --amber: #FFA028;
+    --cyan: #4FE3E0;
+    --line: #2A2D3D;
+    --serif: "Didot", "Playfair Display", "Georgia", serif;
+    --sans: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", "Menlo", "Cascadia Mono", monospace;
+  }
+  html { background: var(--night); }
+  body {
+    background: var(--night);
+    color: var(--cream);
+    font-family: var(--sans);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .grain {
+    position: fixed; inset: 0; pointer-events: none; z-index: 50; opacity: .05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E");
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 72px 0; border-bottom: 1px solid var(--line); }
+
+  .eyebrow {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--amber); margin: 0 0 14px;
+  }
+  .note {
+    font-family: var(--mono); font-size: 12.5px; color: var(--muted);
+    border-left: 2px solid var(--line); padding-left: 14px; max-width: 62ch;
+  }
+  h2.spec {
+    font-family: var(--serif); font-weight: 400; font-size: 34px;
+    letter-spacing: -.01em; margin: 0 0 10px; text-wrap: balance;
+  }
+
+  /* ---------- header ---------- */
+  header.masthead { padding: 56px 0 40px; border-bottom: 1px solid var(--line); }
+  .masthead h1 {
+    font-family: var(--serif); font-weight: 400; font-size: 28px; margin: 6px 0 0;
+    color: var(--cream);
+  }
+
+  /* ---------- hero mock ---------- */
+  .hero-mock { padding: 88px 0 80px; text-align: left; }
+  .hero-mock h1 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(44px, 7vw, 76px); line-height: 1.04; letter-spacing: -.015em;
+    margin: 18px 0 26px; max-width: 18ch; text-wrap: balance;
+  }
+  .hero-mock h1 em {
+    font-style: italic; color: var(--amber);
+    text-shadow: 0 0 26px rgba(255,160,40,.45);
+    animation: flicker 4.2s infinite;
+  }
+  @keyframes flicker {
+    0%, 100% { opacity: 1; } 78% { opacity: 1; }
+    80% { opacity: .74; } 82% { opacity: .96; } 85% { opacity: .82; } 88% { opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-mock h1 em, .ticker-inner { animation: none !important; }
+  }
+  .hero-sub { font-size: 19px; color: var(--cream); max-width: 58ch; margin: 0 0 22px; }
+  .hero-meta {
+    font-family: var(--mono); font-size: 12.5px; letter-spacing: .14em;
+    color: var(--muted); margin: 0 0 34px;
+  }
+  .btn-row { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn {
+    font-family: var(--mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase;
+    padding: 14px 26px; border-radius: 4px; cursor: pointer; border: 1px solid var(--amber);
+    transition: box-shadow .25s, transform .25s;
+  }
+  .btn.primary { background: var(--amber); color: var(--night); }
+  .btn.ghost { background: transparent; color: var(--amber); }
+  .btn:hover { box-shadow: 0 0 32px rgba(255,160,40,.42); transform: scale(1.02); }
+
+  /* ---------- palette ---------- */
+  .swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin-top: 28px; }
+  .swatch { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .swatch .chip { height: 84px; }
+  .swatch .label { padding: 10px 12px; font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+  .swatch .label b { display: block; color: var(--cream); font-weight: 600; letter-spacing: .06em; }
+
+  /* ---------- type voices ---------- */
+  .voices { display: grid; gap: 26px; margin-top: 30px; }
+  .voice { border: 1px solid var(--line); border-radius: 6px; padding: 28px 30px; background: var(--raised); }
+  .voice .tag { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; color: var(--cyan); text-transform: uppercase; }
+  .voice-serif { font-family: var(--serif); font-size: 40px; line-height: 1.08; margin: 12px 0 0; letter-spacing: -.01em; }
+  .voice-sans { font-size: 17px; max-width: 62ch; margin: 12px 0 0; color: var(--cream); }
+  .voice-mono { font-family: var(--mono); font-size: 14px; color: var(--amber); margin: 12px 0 0; }
+
+  /* ---------- cream panel ---------- */
+  .print-ad {
+    background: var(--paper); color: var(--ink); border-radius: 6px;
+    padding: 64px 56px; margin-top: 30px; border: 1px solid #d9d0bd;
+  }
+  .print-ad .eyebrow { color: #8a6a2f; }
+  .print-ad h3 {
+    font-family: var(--serif); font-weight: 400; font-size: 42px; margin: 0 0 18px;
+    letter-spacing: -.01em; text-wrap: balance;
+  }
+  .print-ad p { font-size: 17.5px; line-height: 1.65; max-width: 64ch; margin: 0 0 22px; }
+  .print-ad .fine {
+    font-family: var(--mono); font-size: 11.5px; letter-spacing: .12em;
+    color: #6b6252; border-top: 1px solid #d9d0bd; padding-top: 14px; margin: 0;
+  }
+
+  /* ---------- work cards ---------- */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 30px; }
+  .card {
+    background: var(--raised); border: 1px solid var(--line); border-radius: 6px;
+    padding: 30px 28px 26px; transition: border-color .25s, box-shadow .25s;
+    display: flex; flex-direction: column; gap: 12px; min-height: 210px;
+  }
+  .card:hover { border-color: var(--amber); box-shadow: 0 0 34px rgba(255,160,40,.22); }
+  .card .kicker { font-family: var(--mono); font-size: 11px; letter-spacing: .16em; color: var(--muted); }
+  .card h4 { font-family: var(--serif); font-weight: 400; font-size: 25px; line-height: 1.15; margin: 0; }
+  .card .metric {
+    font-family: var(--mono); font-size: 12px; color: var(--amber);
+    opacity: 0; transform: translateY(4px); transition: opacity .25s, transform .25s;
+    margin-top: auto;
+  }
+  .card:hover .metric { opacity: 1; transform: none; }
+
+  /* ---------- ticker ---------- */
+  .ticker {
+    margin-top: 30px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    overflow: hidden; white-space: nowrap; padding: 16px 0;
+  }
+  .ticker-inner {
+    display: inline-block; font-family: var(--mono); font-size: 13px;
+    letter-spacing: .12em; color: var(--amber);
+    animation: scroll 28s linear infinite;
+  }
+  .ticker-inner span { color: var(--line); padding: 0 18px; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ---------- rules ---------- */
+  .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 28px; }
+  .rule { border: 1px solid var(--line); border-radius: 6px; padding: 22px 24px; background: var(--raised); }
+  .rule .tag { font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; }
+  .rule.do .tag { color: var(--cyan); }
+  .rule.dont .tag { color: #ff6a5e; }
+  .rule p { font-size: 14.5px; color: var(--cream); margin: 10px 0 0; }
+
+  footer { padding: 48px 0 72px; }
+</style>
+
+<div class="grain"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Visual direction · v1 · for the Framer build</p>
+    <h1>The Retro-Futurist Ad Agency of One</h1>
+  </div>
+</header>
+
+<!-- HERO MOCK -->
+<section class="hero-mock">
+  <div class="wrap">
+    <p class="eyebrow">01 · Hero — as it should feel</p>
+    <h1>Marketing that runs itself. Built by someone who's <em>run</em> marketing.</h1>
+    <p class="hero-sub">Habon Nur — Marketing Operations × AI Engineering. I design and ship AI systems for marketing and growth teams: agents, pipelines, and automations that hold up in production.</p>
+    <p class="hero-meta">NYC / REMOTE · OPEN TO: GTM ENGINEER · MARKETING OPS AI · AGENTIC OPERATOR</p>
+    <div class="btn-row">
+      <div class="btn primary">See the work</div>
+      <div class="btn ghost">Get in touch</div>
+    </div>
+  </div>
+</section>
+
+<!-- PALETTE -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">02 · Palette</p>
+    <h2 class="spec">Neon is punctuation, not wallpaper.</h2>
+    <p class="note">Amber is the star; cyan is the cameo. Cream panels are the "print" world — matte, no glow.</p>
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#12131C"></div><div class="label"><b>NIGHT</b>#12131C · page bg</div></div>
+      <div class="swatch"><div class="chip" style="background:#1A1C28"></div><div class="label"><b>NIGHT/RAISED</b>#1A1C28 · cards</div></div>
+      <div class="swatch"><div class="chip" style="background:#F2EBDD"></div><div class="label"><b>PAPER</b>#F2EBDD · print panels</div></div>
+      <div class="swatch"><div class="chip" style="background:#FFA028"></div><div class="label"><b>NEON AMBER</b>#FFA028 · primary accent</div></div>
+      <div class="swatch"><div class="chip" style="background:#4FE3E0"></div><div class="label"><b>NEON CYAN</b>#4FE3E0 · sparingly</div></div>
+      <div class="swatch"><div class="chip" style="background:#8A8FA3"></div><div class="label"><b>MUTED</b>#8A8FA3 · secondary text</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPE -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">03 · Three type voices</p>
+    <h2 class="spec">Serif pitches. Sans explains. Mono proves.</h2>
+    <p class="note">In Framer use: Instrument Serif · Inter · JetBrains Mono. (This preview uses system stand-ins — Didot here ≈ Instrument Serif's role.)</p>
+    <div class="voices">
+      <div class="voice"><span class="tag">Voice 1 · The Pitch · serif</span>
+        <p class="voice-serif">Campaign setup, minus 80% of the setup.</p></div>
+      <div class="voice"><span class="tag">Voice 2 · The Explanation · sans</span>
+        <p class="voice-sans">The win wasn't the model — it was knowing exactly what a usable campaign ticket looks like, because I'd written hundreds by hand.</p></div>
+      <div class="voice"><span class="tag">Voice 3 · The Machine · mono</span>
+        <p class="voice-mono">— 14 FETCHED · 6 SHOWN · 8 FILTERED · 0 TOOL ERRORS</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CREAM PANEL -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">04 · The print-ad panel (the Mad Men moment)</p>
+    <div class="print-ad">
+      <p class="eyebrow">The pitch</p>
+      <h3>Old-school marketing. New-school machinery.</h3>
+      <p>Most marketing teams are choosing between two hires: the strategist who understands lifecycle, segments, and send-time — and the engineer who can actually wire the tools together. I've been the first one for seven years. Then I started building the second one's systems myself.</p>
+      <p class="fine">EVERY CLAIM ON THIS SITE HAS A RECEIPT — A METRIC, A LOG, OR A DIAGRAM.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WORK CARDS -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">05 · Work cards (hover them)</p>
+    <div class="cards">
+      <div class="card">
+        <span class="kicker">PERSONAL INFRASTRUCTURE · 24/7</span>
+        <h4>The agent that reads my inbox so I don't have to.</h4>
+        <span class="metric">6 RUNS/DAY · EVERY CLAIM HAS A MESSAGE-ID RECEIPT</span>
+      </div>
+      <div class="card">
+        <span class="kicker">SHIPPED IN PRODUCTION · SQUARE</span>
+        <h4>Campaign setup, minus 80% of the setup.</h4>
+        <span class="metric">SLACK + NOTION SIGNALS → JIRA TICKETS</span>
+      </div>
+      <div class="card">
+        <span class="kicker">GOVERNED AI · OPEN SOURCE</span>
+        <h4>AI you can audit. Receipts included.</h4>
+        <span class="metric">VERSIONED · EVAL-GATED · PAPER TRAIL</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<section>
+  <div class="wrap"><p class="eyebrow">06 · Receipts strip</p></div>
+  <div class="ticker"><div class="ticker-inner">
+    AGENTS RUNNING 24/7 ON A SELF-HOSTED VPS<span>///</span>1,500+ ENTITIES IN A SELF-OWNED MEMORY GRAPH<span>///</span>~80% REDUCTION IN MANUAL CAMPAIGN SETUP<span>///</span>VERSIONED, EVAL-GATED SKILLS IN PRODUCTION<span>///</span>AGENTS RUNNING 24/7 ON A SELF-HOSTED VPS<span>///</span>1,500+ ENTITIES IN A SELF-OWNED MEMORY GRAPH<span>///</span>~80% REDUCTION IN MANUAL CAMPAIGN SETUP<span>///</span>VERSIONED, EVAL-GATED SKILLS IN PRODUCTION<span>///</span>
+  </div></div>
+</section>
+
+<!-- RULES -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">07 · Guardrails for the design itself</p>
+    <div class="rules">
+      <div class="rule do"><span class="tag">Do</span><p>One signature motion moment (the neon flicker in the hero). Scroll reveals on section entry only. Glow as hover feedback.</p></div>
+      <div class="rule do"><span class="tag">Do</span><p>Cream panels stay matte and print-like: thin borders, small radii (4–8px), generous padding, no glow.</p></div>
+      <div class="rule dont"><span class="tag">Don't</span><p>No purple gradients, no glassmorphism, no more than ~3 cyan elements per screen, no motion on body text.</p></div>
+      <div class="rule dont"><span class="tag">Don't</span><p>If a section has scroll reveal + hover + flicker — remove one. Restraint reads senior.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="note">Companion files: copy-deck.md · framer-style-guide.md · seo-and-assets.md · /diagrams (3 SVGs) — all in ~/Documents/AI Workspace/portfolio-site/</p>
+  </div>
+</footer>
